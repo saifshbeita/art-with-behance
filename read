@@ -1,96 +1,372 @@
-# 🎨💻 Sharing Your Art with Code on Behance  
-**A Creative Guide by Saif**
-
-This guide explores how to use [Behance](https://www.behance.net/) to share artistic projects that are powered or enhanced by **code** — whether you're a generative artist, an AI creative, or someone building stylish, interactive, web-based experiences.
-
----
-
-## 🧠 Why Use Behance for Code-Based Art?
-
-Behance isn’t just for graphic designers. If your creativity involves both code and visuals — like:
-
-- 🎨 AI-generated artwork
-- 🧬 Generative designs (p5.js, Processing, Three.js)
-- 🌐 Creative websites or web-based portfolios
-- 🖼️ Interactive, code-driven installations
-
-Behance can be your visual storytelling platform — perfect for showcasing the *art* behind the *tech*.
-
----
-
-## 🛠️ What You’ll Need
-
-- A free Behance account
-- A coded art project (hosted on GitHub or deployed live)
-- Screenshots or videos of your work
-- A short, engaging write-up for your project story
-
----
-
-## ✍️ How to Share Code-Based Art on Behance
-
-### 1. Document Your Project
-
-- Write a good `README.md` in your GitHub repo.
-- Include:
-  - The concept and creative inspiration
-  - The tools or languages used
-  - Screenshots or video demos
-  - A link to the live project
-
-### 2. Capture Visuals
-
-- Export screenshots of your artwork or interactive output
-- Record short screen videos for moving elements
-- Design simple cover slides in tools like Canva or Figma
-
-### 3. Create a New Project on Behance
-
-- Go to your Behance profile → `Create Project`
-- Upload images/videos in a visually organized flow
-- Add sections like:
-  - **🔖 Title & Overview**
-  - **🎨 The Inspiration**
-  - **🛠️ The Process (Code shots, sketches)**
-  - **🚀 Final Result**
-  - **🌐 Links to GitHub & Live Demo**
-
-### 4. Add a Description Like This:
-
-> *This piece blends AI creativity and classic design. Using Python and DALL·E, I generated visual reinterpretations of historical artworks. I refined the results in Photoshop and styled the final layout using Figma. This project explores the intersection of tech, culture, and visual storytelling.*
-
-### 5. Share & Tag Smartly
-
-- Use tags like `#creativecode`, `#generativeart`, `#aiart`, `#frontenddevelopment`
-- Add links to:
-  - 🔗 Your GitHub repo  
-  - 🌐 Your live website or deployment  
-  - 🎥 Demo reel (optional)
-
----
-
-## 📦 Example Project Ideas
-
-| Type                    | Tools Used                | Idea Example                          |
-|-------------------------|---------------------------|---------------------------------------|
-| AI Art Remix            | DALL·E, Python             | “Vermeer in Van Gogh’s World”         |
-| Generative Design       | p5.js, Processing          | “Interactive Geometry Playground”     |
-| Creative Portfolio Site | HTML, CSS, GSAP            | “Scroll-based Animated Art Gallery”   |
-| Art Tools               | React, Canvas API          | “Tatreez Pattern Creator”             |
-
----
-
-## 💬 Final Thoughts
-
-Combining code with creativity gives your projects life, meaning, and motion.  
-Behance lets you **tell that story visually**, while GitHub shows **how it was built**.
-
-Together, they’re the perfect combo for the modern creative.
-
-> 🎯 *Make your art seen. Let your code speak. Inspire across platforms.*
-
----
-
-📍 **Created by Saif Shbeita**  
-🔗 [Follow me on Behance](https://www.behance.net/)  
-🌍 [Explore my GitHub Projects](https://github.com/saifshbeita)  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharing Your Art with Code on Behance</title>
+  <style>
+    :root {
+      --primary: #2a9d8f;
+      --secondary: #e76f51;
+      --dark: #264653;
+      --light: #f8f9fa;
+      --accent: #f4a261;
+      --text: #333;
+      --background: #f8f9fa;
+      --code-bg: #edf2f7;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--background);
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .container {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--primary);
+    }
+    
+    h1 {
+      color: var(--dark);
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 800;
+    }
+    
+    .subtitle {
+      color: var(--secondary);
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+    }
+    
+    .divider {
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-radius: 2px;
+      margin: 2rem 0;
+    }
+    
+    section {
+      margin-bottom: 2.5rem;
+    }
+    
+    h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    h3 {
+      color: var(--dark);
+      margin-bottom: 0.8rem;
+      font-size: 1.3rem;
+    }
+    
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .emoji {
+      font-size: 1.3em;
+      margin-right: 0.3rem;
+    }
+    
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    
+    a:hover {
+      color: var(--secondary);
+      text-decoration: underline;
+    }
+    
+    .highlight {
+      background-color: var(--code-bg);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.9rem;
+    }
+    
+    blockquote {
+      border-left: 4px solid var(--accent);
+      padding: 1rem;
+      background-color: rgba(244, 162, 97, 0.1);
+      margin: 1.5rem 0;
+      font-style: italic;
+      border-radius: 0 5px 5px 0;
+    }
+    
+    .table-container {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.8rem;
+      text-align: left;
+    }
+    
+    th {
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--primary);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+      list-style: none;
+    }
+    
+    .tag {
+      background-color: var(--accent);
+      color: white;
+      padding: 0.3rem 0.7rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      display: inline-block;
+    }
+    
+    .note {
+      background-color: rgba(42, 157, 143, 0.1);
+      border-left: 4px solid var(--primary);
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 0 5px 5px 0;
+    }
+    
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+      
+      .container {
+        padding: 1.5rem;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎨💻 Sharing Your Art with Code on Behance</h1>
+      <div class="subtitle"><strong>A Creative Guide by Saif</strong></div>
+      <p>This guide explores how to use <a href="https://www.behance.net/" target="_blank">Behance</a> to share artistic projects that are powered or enhanced by <strong>code</strong> — whether you're a generative artist, an AI creative, or someone building stylish, interactive, web-based experiences.</p>
+    </header>
+    
+    <div class="divider"></div>
+    
+    <section>
+      <h2>🧠 Why Use Behance for Code-Based Art?</h2>
+      <p>Behance isn't just for graphic designers. If your creativity involves both code and visuals — like:</p>
+      <ul>
+        <li>🎨 AI-generated artwork</li>
+        <li>🧬 Generative designs (p5.js, Processing, Three.js)</li>
+        <li>🌐 Creative websites or web-based portfolios</li>
+        <li>🖼️ Interactive, code-driven installations</li>
+      </ul>
+      <p>Behance can be your visual storytelling platform — perfect for showcasing the <em>art</em> behind the <em>tech</em>.</p>
+    </section>
+    
+    <div class="divider"></div>
+    
+    <section>
+      <h2>🛠️ What You'll Need</h2>
+      <ul>
+        <li>A free Behance account</li>
+        <li>A coded art project (hosted on GitHub or deployed live)</li>
+        <li>Screenshots or videos of your work</li>
+        <li>A short, engaging write-up for your project story</li>
+      </ul>
+    </section>
+    
+    <div class="divider"></div>
+    
+    <section>
+      <h2>✍️ How to Share Code-Based Art on Behance</h2>
+      
+      <h3>1. Document Your Project</h3>
+      <ul>
+        <li>Write a good <span class="highlight">README.md</span> in your GitHub repo.</li>
+        <li>Include:
+          <ul>
+            <li>The concept and creative inspiration</li>
+            <li>The tools or languages used</li>
+            <li>Screenshots or video demos</li>
+            <li>A link to the live project</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h3>2. Capture Visuals</h3>
+      <ul>
+        <li>Export screenshots of your artwork or interactive output</li>
+        <li>Record short screen videos for moving elements</li>
+        <li>Design simple cover slides in tools like Canva or Figma</li>
+      </ul>
+      
+      <h3>3. Create a New Project on Behance</h3>
+      <ul>
+        <li>Go to your Behance profile → <span class="highlight">Create Project</span></li>
+        <li>Upload images/videos in a visually organized flow</li>
+        <li>Add sections like:
+          <ul>
+            <li><strong>🔖 Title & Overview</strong></li>
+            <li><strong>🎨 The Inspiration</strong></li>
+            <li><strong>🛠️ The Process (Code shots, sketches)</strong></li>
+            <li><strong>🚀 Final Result</strong></li>
+            <li><strong>🌐 Links to GitHub & Live Demo</strong></li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h3>4. Add a Description Like This:</h3>
+      <blockquote>
+        <em>This piece blends AI creativity and classic design. Using Python and DALL·E, I generated visual reinterpretations of historical artworks. I refined the results in Photoshop and styled the final layout using Figma. This project explores the intersection of tech, culture, and visual storytelling.</em>
+      </blockquote>
+      
+      <h3>5. Share & Tag Smartly</h3>
+      <ul>
+        <li>Use tags like 
+          <span class="tag">#creativecode</span>
+          <span class="tag">#generativeart</span>
+          <span class="tag">#aiart</span>
+          <span class="tag">#frontenddevelopment</span>
+        </li>
+        <li>Add links to:
+          <ul>
+            <li>🔗 Your GitHub repo</li>
+            <li>🌐 Your live website or deployment</li>
+            <li>🎥 Demo reel (optional)</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    
+    <div class="divider"></div>
+    
+    <section>
+      <h2>📦 Example Project Ideas</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Tools Used</th>
+              <th>Idea Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>AI Art Remix</td>
+              <td>DALL·E, Python</td>
+              <td>"Vermeer in Van Gogh's World"</td>
+            </tr>
+            <tr>
+              <td>Generative Design</td>
+              <td>p5.js, Processing</td>
+              <td>"Interactive Geometry Playground"</td>
+            </tr>
+            <tr>
+              <td>Creative Portfolio Site</td>
+              <td>HTML, CSS, GSAP</td>
+              <td>"Scroll-based Animated Art Gallery"</td>
+            </tr>
+            <tr>
+              <td>Art Tools</td>
+              <td>React, Canvas API</td>
+              <td>"Tatreez Pattern Creator"</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    
+    <div class="divider"></div>
+    
+    <section>
+      <h2>💬 Final Thoughts</h2>
+      <p>Combining code with creativity gives your projects life, meaning, and motion.<br>
+      Behance lets you <strong>tell that story visually</strong>, while GitHub shows <strong>how it was built</strong>.<br>
+      Together, they're the perfect combo for the modern creative.</p>
+      
+      <blockquote>
+        🎯 <em>Make your art seen. Let your code speak. Inspire across platforms.</em>
+      </blockquote>
+    </section>
+    
+    <div class="divider"></div>
+    
+    <footer>
+      <p>📍 <strong>Created by Saif Shbeita</strong><br>
+      🌍 <a href="https://github.com/saifshbeita" target="_blank">Explore my GitHub Projects</a></p>
+    </footer>
+  </div>
+</body>
+</html>
